@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mi Portafolio | Azure Cloud</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700&amp;display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="dark-mode">
+    <!-- ===== NAVEGACIÓN ===== -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#home">
+                <span style="color: var(--primary-color); font-weight: 700;">Cloud</span>Dev
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">Sobre Mí</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Proyectos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contacto</a>
+                    </li>
+                </ul>
+                <div class="theme-toggle ms-3" onclick="toggleTheme()">
+                    <i class="fa-solid fa-moon" id="theme-icon"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== HOME / PRESENTACIÓN ===== -->
+    <section id="home" class="bg-dark-custom" style="padding-top: 150px;">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <p class="text-primary-custom fs-4 mb-3"> Hola, soy</p>
+                    <h1 class="display-3 fw-bold mb-4"> Nombre Completo</h1>
+                    <h2 class="fs-2 mb-4" style="color: var(--primary-color);">
+                        Estudiante de ISC
+                        <span class="azure-badge">☁️ Azure Cloud</span>
+                    </h2>
+                    <p class="fs-5 mb-5">
+                        Estudiante de 6to semestre con especialidad en <strong>Cloud Computing</strong>.
+                        Apasionado por los servicios cloud, App Services, funciones serverless y bases de datos en la
+                        nube.
+                    </p>
+                    <div class="d-flex gap-3">
+                        <a href="#contact" class="btn btn-primary-custom">Contacto</a>
+                        <a href="#projects" class="btn btn-outline-custom">Ver Proyectos Azure</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center mt-5 mt-lg-0">
+                    <div class="profile-image">
+                        <img src="https://via.placeholder.com/400" alt="foto">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SOBRE MÍ ===== -->
+    <section id="about">
+        <div class="container">
+            <p class="text-center fs-4" style="color: var(--primary-color);">Sobre mí</p>
+            <h2 class="text-center fs-1 fw-bold mb-5">Especialidad en Cloud Computing</h2>
+
+            <div class="row mt-5">
+                <div class="col-lg-6">
+                    <h3 class="fw-bold mb-4">Educación</h3>
+                    <div class="mb-4">
+                        <h4 class="fw-bold">Ingeniería en Sistemas Computacionales</h4>
+                        <p style="color: var(--primary-color);">ITSX | 2024 - Actualidad</p>
+                        <p class="text-muted">6to semestre - Especialidad en Cloud Computing </p>
+                    </div>
+                    <div class="mb-4">
+                        <h4 class="fw-bold"> Cursos Cloud</h4>
+                        <ul class="list-unstyled">
+                            <li class="mb-2">✓ Microsoft Azure Fundamentals (AZ-900) - En progreso</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <h3 class="fw-bold mb-4"><i class="fa-brands fa-microsoft me-2"></i>Habilidades</h3>
+                    <div class="mb-4">
+                        <h5 class="mb-3">Servicios Azure</h5>
+                        <div>
+                            <span class="skill-tag">App Services</span>
+                            <span class="skill-tag">Azure Functions</span>
+                            <span class="skill-tag">SQL Database</span>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <h5 class="mb-3">Backend</h5>
+                        <div>
+                            <span class="skill-tag">Node.js</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Java</span>
+                            <span class="skill-tag">API REST</span>
+                            <span class="skill-tag">SQL Server</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h5 class="mb-3">Herramientas</h5>
+                        <div>
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">GitHub</span>
+                            <span class="skill-tag">VS Code</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PROYECTOS ===== -->
+    <section id="projects" class="bg-dark-custom">
+        <div class="container">
+            <p class="text-center fs-4" style="color: var(--primary-color);">Proyectos</p>
+            <h2 class="text-center fs-1 fw-bold mb-5">Proyectos reales en la nube </h2>
+
+            <div class="real-project">
+                <p class="text-primary-custom mb-2">
+                    <i class="fa-solid fa-check-circle"></i> Proyectos académicos y personales
+                </p>
+            </div>
+
+            <div class="row g-4">
+                <!-- PROYECTO 1: App de Zapaterías -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="project-card in-progress">
+                        <div class="azure-icon">
+                            <i class="fa-solid fa-store"></i>
+                        </div>
+                        <h3 class="fw-bold">Sistema de Inventario para Zapaterías</h3>
+                        <p class="text-muted">
+                            <span class="badge bg-primary mb-2">Proyecto de Programación Web</span>
+                        </p>
+                        <p class="text-muted">
+                            Aplicación web que resuelve el problema de falta de conocimiento de stock en múltiples
+                            sucursales. Permite consultar inventario en tiempo real desde cualquier tienda.
+                        </p>
+                        <div class="mt-3">
+                            <span class="skill-tag" style="font-size: 0.8rem;">Azure App Service</span>
+                            <span class="skill-tag" style="font-size: 0.8rem;">SQL Database</span>
+                            <span class="skill-tag" style="font-size: 0.8rem;">Node.js</span>
+                            <span class="skill-tag" style="font-size: 0.8rem;">Bootstrap</span>
+                        </div>
+                        <div class="mt-3">
+                            <small class="text-primary-custom">
+                                <i class="fa-solid fa-circle-check me-1"></i>
+                                En desarrollo - Proyecto de materia
+                            </small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROYECTO 2: App Service Demo -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="project-card completed">
+                        <div class="azure-icon">
+                            <i class="fa-solid fa-cloud"></i>
+                        </div>
+                        <h3 class="fw-bold">App Service Demo - McDonald's</h3>
+                        <p class="text-muted">
+                            <span class="badge bg-success mb-2">Práctica completada</span>
+                        </p>
+                        <p class="text-muted">
+                            Implementación de una aplicación web demo en Azure App Service. Práctica de despliegue
+                            continuo y configuración de servicios cloud.
+                        </p>
+                        <div class="mt-3">
+                            <span class="skill-tag" style="font-size: 0.8rem;">Azure App Service</span>
+                            <span class="skill-tag" style="font-size: 0.8rem;">HTML/CSS</span>
+                            <span class="skill-tag" style="font-size: 0.8rem;">Azure DevOps</span>
+                        </div>
+                        <div class="mt-3">
+                            <small class="text-success">
+                                <i class="fa-solid fa-circle-check me-1"></i>
+                                Completado - Práctica de laboratorio
+                            </small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROYECTO 3: API Serverless -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="project-card in-progress">
+                        <div class="azure-icon">
+                            <i class="fa-solid fa-bolt"></i>
+                        </div>
+                        <h3 class="fw-bold">API Serverless para Notificaciones</h3>
+                        <p class="text-muted">
+                            <span class="badge bg-info mb-2">Próximo proyecto</span>
+                        </p>
+                        <p class="text-muted">
+                            API sin servidor usando Azure Functions que envía notificaciones por correo cuando el stock
+                            de un producto es bajo. Ideal para complementar el sistema de zapaterías.
+                        </p>
+                        <div class="mt-3">
+                            <span class="skill-tag" style="font-size: 0.8rem;">Azure Functions</span>
+                            <span class="skill-tag" style="font-size: 0.8rem;">SendGrid</span>
+                            <span class="skill-tag" style="font-size: 0.8rem;">Queue Storage</span>
+                            <span class="skill-tag" style="font-size: 0.8rem;">Node.js</span>
+                        </div>
+                        <div class="mt-3">
+                            <small class="text-primary-custom">
+                                <i class="fa-regular fa-clock me-1"></i>
+                                Planeado - Para integrar con proyecto actual
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PROYECTO RECOMENDADO ADICIONAL -->
+            <div class="row mt-4">
+                <div class="col-12">
+                    <div class="project-card recommended-card">
+                        <div class="row align-items-center">
+                            <div class="col-md-2 text-center">
+                                <i class="fa-solid fa-star" style="font-size: 3rem; color: #0078d4;"></i>
+                            </div>
+                            <div class="col-md-10">
+                                <h3 class="fw-bold" style="color: #0078d4;">🎯 Proyecto Recomendado: Azure Cognitive
+                                    Search</h3>
+                                <p class="text-muted">
+                                    Implementar un <strong>buscador inteligente</strong> para el catálogo de zapatos
+                                    usando Azure Cognitive Search.
+                                    Los clientes podrían buscar por:
+                                </p>
+                                <ul>
+                                    <li>Modelo, talla, color, sucursal disponible</li>
+                                    <li>Búsqueda por imagen (subir foto del zapato)</li>
+                                    <li>Sugerencias automáticas mientras escriben</li>
+                                </ul>
+                                <div class="mt-2">
+                                    <span class="skill-tag" style="font-size: 0.8rem;">Azure Cognitive Search</span>
+                                    <span class="skill-tag" style="font-size: 0.8rem;">AI Skills</span>
+                                    <span class="skill-tag" style="font-size: 0.8rem;">Blob Storage</span>
+                                    <span class="skill-tag" style="font-size: 0.8rem;">REST API</span>
+                                </div>
+                                <p class="mt-2 text-primary-custom">
+                                    <i class="fa-regular fa-lightbulb"></i>
+                                    Ideal para destacar habilidades en AI + Cloud
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Nota aclaratoria -->
+            <div class="text-center mt-5">
+                <p class="text-muted">
+                    <i class="fa-solid fa-info-circle me-2" style="color: var(--primary-color);"></i>
+                    Proyectos desarrollados como parte de mi especialidad en Microsoft Azure.
+                    La app de zapaterías es mi proyecto principal de Programación Web,
+                    y la API serverless será el siguiente paso para agregar funcionalidades inteligentes.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACTO ===== -->
+    <section id="contact">
+        <div class="container">
+            <p class="text-center fs-4" style="color: var(--primary-color);">Contacto</p>
+            <h2 class="text-center fs-1 fw-bold mb-5"></h2>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <div class="text-center">
+                                <div class="contact-icon mx-auto mb-3">
+                                    <i class="fa-regular fa-envelope"></i>
+                                </div>
+                                <h5>Email</h5>
+                                <p class="text-muted">@email.com</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="text-center">
+                                <div class="contact-icon mx-auto mb-3">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </div>
+                                <h5>LinkedIn</h5>
+                                <p class="text-muted">perfil</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="text-center">
+                                <div class="contact-icon mx-auto mb-3">
+                                    <i class="fa-brands fa-github"></i>
+                                </div>
+                                <h5>GitHub</h5>
+                                <p class="text-muted">@usuario</p>
+                            </div>
+                        </div>
+                    </div>
+                    <form action="https://formspree.io/f/xykneaky" method="POST" class="mt-5">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="nombre" class="form-label fw-bold">Nombre completo:</label>
+                                <input type="text" class="form-control form-control-lg" id="nombre" name="nombre"
+                                    placeholder="Ej. Juan Pérez" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="email" class="form-label fw-bold">Correo electrónico:</label>
+                                <input type="email" class="form-control form-control-lg" id="email" name="email"
+                                    placeholder="tucorreo@ejemplo.com" required>
+                            </div>
+                            <div class="col-12">
+                                <label for="telefono" class="form-label fw-bold">Teléfono (opcional):</label>
+                                <input type="tel" class="form-control form-control-lg" id="telefono" name="telefono"
+                                    placeholder="55 1234 5678">
+                            </div>
+                            <div class="col-12">
+                                <label for="asunto" class="form-label fw-bold">Asunto:</label>
+                                <select class="form-select form-select-lg" id="asunto" name="asunto" required>
+                                    <option value="" selected disabled>Selecciona una opción</option>
+                                    <option value="laboral">Oportunidad laboral</option>
+                                    <option value="proyecto">Colaboración en proyecto</option>
+                                    <option value="azure">Consulta sobre Azure</option>
+                                    <option value="otro">Otro</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <label for="mensaje" class="form-label fw-bold">Mensaje:</label>
+                                <textarea class="form-control form-control-lg" id="mensaje" name="mensaje" rows="5"
+                                    placeholder="Escribe tu mensaje aquí..." required></textarea>
+                            </div>
+                            <div class="col-12 text-center">
+                                <button type="submit" class="btn btn-primary-custom btn-lg">
+                                    <i class="fa-regular fa-paper-plane me-2"></i>
+                                    Enviar mensaje
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="container">
+            <div class="row justify-content-between align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0">© 2026 Nombre - Azure Cloud Developer en formación</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="me-3"><i class="fa-brands fa-github fs-4"></i></a>
+                    <a href="#" class="me-3"><i class="fa-brands fa-linkedin fs-4"></i></a>
+                    <a href="#"><i class="fa-brands fa-microsoft fs-4" style="color: #0078d4;"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

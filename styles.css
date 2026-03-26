@@ -1,0 +1,267 @@
+:root {
+    --primary-color: #9b59b6;
+    --primary-light: #8e44ad;
+    --bg-dark: #0a0a0a;
+    --bg-light: #ffffff;
+    --text-dark: #333333;
+    --text-light: #f8f9fa;
+    --azure-blue: #0078d4;
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    scroll-behavior: smooth;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Modo oscuro */
+body.dark-mode {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+}
+
+body.dark-mode .bg-custom {
+    background-color: var(--bg-dark);
+}
+
+body.dark-mode .text-muted {
+    color: #adb5bd !important;
+}
+
+body.dark-mode .project-card {
+    background-color: #1a1a1a;
+    color: var(--text-light);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .project-card h3,
+body.dark-mode .project-card p {
+    color: var(--text-light);
+}
+
+body.dark-mode .project-card .text-muted {
+    color: #adb5bd !important;
+}
+
+body.dark-mode footer {
+    background-color: #1a1a1a;
+    color: var(--text-light);
+}
+
+body.dark-mode footer a {
+    color: var(--text-light) !important;
+}
+
+/* Modo claro */
+body.light-mode {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+}
+
+body.light-mode .navbar {
+    background-color: var(--bg-light) !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .nav-link {
+    color: var(--text-dark) !important;
+}
+
+body.light-mode .nav-link:hover {
+    color: var(--primary-color) !important;
+}
+
+body.light-mode .bg-dark-custom {
+    background-color: #f8f9fa;
+}
+
+body.light-mode .text-white {
+    color: var(--text-dark) !important;
+}
+
+body.light-mode .text-white-50 {
+    color: #6c757d !important;
+}
+
+body.light-mode .btn-outline-custom {
+    border: 2px solid var(--text-dark);
+    color: var(--text-dark);
+}
+
+body.light-mode .btn-outline-custom:hover {
+    background-color: var(--text-dark);
+    color: var(--bg-light);
+}
+
+body.light-mode footer {
+    background-color: #f8f9fa;
+    color: var(--text-dark);
+}
+
+body.light-mode footer a {
+    color: var(--text-dark) !important;
+}
+
+.navbar {
+    transition: background-color 0.3s;
+    padding: 1rem 0;
+}
+
+.nav-link {
+    margin: 0 1rem;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: var(--primary-color) !important;
+}
+
+.nav-link.active {
+    color: var(--primary-color) !important;
+}
+
+section {
+    padding: 80px 0;
+}
+
+.bg-dark-custom {
+    transition: background-color 0.3s;
+}
+
+.text-primary-custom {
+    color: var(--primary-color);
+}
+
+.btn-primary-custom {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 600;
+    padding: 12px 30px;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.btn-primary-custom:hover {
+    background-color: var(--primary-light);
+}
+
+.btn-outline-custom {
+    font-weight: 600;
+    padding: 12px 30px;
+    transition: all 0.3s;
+}
+
+.skill-tag {
+    background-color: rgba(155, 89, 182, 0.1);
+    color: var(--primary-color);
+    padding: 8px 20px;
+    border-radius: 30px;
+    display: inline-block;
+    margin: 5px;
+    font-weight: 500;
+}
+
+.azure-badge {
+    background: linear-gradient(135deg, #0078d4, #005a9e);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+.project-card {
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, background-color 0.3s;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+.project-card.completed::before {
+    content: "✅ Completado";
+    position: absolute;
+    top: 10px;
+    right: -30px;
+    background: #28a745;
+    color: white;
+    padding: 5px 30px;
+    transform: rotate(45deg);
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.project-card.in-progress::before {
+    content: "🚧 En desarrollo";
+    position: absolute;
+    top: 10px;
+    right: -30px;
+    background: var(--primary-color);
+    color: white;
+    padding: 5px 30px;
+    transform: rotate(45deg);
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.recommended-card {
+    border: 2px solid #0078d4;
+}
+
+.contact-icon {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(155, 89, 182, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+
+footer {
+    transition: background-color 0.3s, color 0.3s;
+    padding: 30px 0;
+}
+
+.theme-toggle {
+    cursor: pointer;
+    margin-left: 1rem;
+    font-size: 1.2rem;
+}
+
+.azure-icon {
+    font-size: 2.5rem;
+    color: #0078d4;
+    margin-bottom: 1rem;
+}
+
+.real-project {
+    border-left: 4px solid #0078d4;
+    padding-left: 20px;
+    margin: 30px 0;
+}
+
+.profile-image {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid var(--primary-color);
+    margin: 0 auto;
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
