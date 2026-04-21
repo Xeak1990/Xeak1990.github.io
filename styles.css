@@ -265,3 +265,13 @@ footer {
     height: 100%;
     object-fit: cover;
 }
+
+/* Clase para ocultar elementos (usada en mostrar/ocultar proyectos) */
+.hidden {
+    display: none !important;
+}
+
+/* Agrega esto al final de tu styles.css existente */
+.project-card {
+    transition: border-color 0.3s ease;
+}
