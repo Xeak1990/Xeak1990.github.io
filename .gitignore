@@ -1,0 +1,27 @@
+# .gitignore
+
+# Variables de entorno
+.env
+.env.local
+.env.*.local
+.env.*
+
+# Dependencias de Composer
+/vendor/
+composer.lock
+
+# Archivos de log
+*.log
+/logs/
+
+# Archivos temporales
+*.tmp
+*.cache
+
+# IDE
+.vscode/
+.idea/
+
+# Sistema
+.DS_Store
+Thumbs.db

@@ -1,8 +1,6 @@
 <?php
-// gestor_mensajes.php
-// Clase para gestionar mensajes usando base de datos MySQL
-
-require_once 'conexion.php';
+// clases/GestorMensajes.php
+// Clase para gestionar mensajes usando variables de entorno
 
 class GestorMensajes {
     private $nombre;
@@ -11,11 +9,10 @@ class GestorMensajes {
     private $asunto;
     private $mensaje;
     private $fecha;
-    private $conn;  // conexión a BD
+    private $conn;
 
     // Constructor
-    public function __construct($nombre, $correo, $telefono, $asunto, $mensaje) {
-        global $conn;
+    public function __construct($nombre, $correo, $telefono, $asunto, $mensaje, $conn) {
         $this->conn = $conn;
         
         $this->nombre = htmlspecialchars(trim($nombre));
@@ -32,7 +29,6 @@ class GestorMensajes {
             return false;
         }
 
-        // Usar Prepared Statement para evitar SQL Injection
         $sql = "INSERT INTO contactos (nombre, correo, telefono, asunto, mensaje, fecha) 
                 VALUES (?, ?, ?, ?, ?, ?)";
         
@@ -52,9 +48,13 @@ class GestorMensajes {
         return $resultado;
     }
 
-    // Método mostrar() - Obtiene todos los mensajes y los devuelve en HTML
-    public function mostrar() {
+    // Método mostrar() - Obtiene todos los mensajes
+    public function mostrar($limit = null) {
         $sql = "SELECT * FROM contactos ORDER BY fecha DESC";
+        if ($limit) {
+            $sql .= " LIMIT " . (int)$limit;
+        }
+        
         $resultado = $this->conn->query($sql);
         
         if ($resultado->num_rows == 0) {
@@ -79,12 +79,20 @@ class GestorMensajes {
         return $html;
     }
     
-    // Método para obtener estadísticas (opcional - muestra cuántos mensajes hay)
+    // Obtener total de mensajes
     public function obtenerTotalMensajes() {
         $sql = "SELECT COUNT(*) as total FROM contactos";
         $resultado = $this->conn->query($sql);
         $fila = $resultado->fetch_assoc();
         return $fila['total'];
+    }
+    
+    // Eliminar un mensaje por ID
+    public function eliminarMensaje($id) {
+        $sql = "DELETE FROM contactos WHERE id = ?";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bind_param("i", $id);
+        return $stmt->execute();
     }
 }
 ?>
